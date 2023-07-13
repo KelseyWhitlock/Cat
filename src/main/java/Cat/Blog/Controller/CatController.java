@@ -28,7 +28,7 @@ public class CatController {
     }
 
     //Find the cat through the id
-    @GetMapping( path="/cat/{catId}")
+    @GetMapping( path="/{catId}")
     public Cat getCatId(@PathVariable("catId") int catId) {
         Optional<Cat> cat = catService.getCatId(catId);
         return cat.orElse(null);
@@ -41,7 +41,7 @@ public class CatController {
     }
 
     //Updating the cat through the user and setting it to the database
-    @PutMapping(path= "/cat/{catId}")
+    @PutMapping(path= "{catId}")
     public String updateCat(@PathVariable int catId, @RequestBody Cat updateCat) {
         try {
             catService.updateCat(catId, updateCat.getColor(), updateCat.getName());
@@ -52,7 +52,7 @@ public class CatController {
     }
 
     //Deleting a cat from the database
-    @DeleteMapping(path= "/cat/{catId}")
+    @DeleteMapping(path= "{catId}")
     public void deleteCat(@PathVariable int catId){
         catService.deleteCat(catId);
     }
