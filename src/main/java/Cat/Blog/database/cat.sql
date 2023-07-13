@@ -1,0 +1,9 @@
+DROP SCHEMA IF EXISTS `cat`;
+CREATE SCHEMA IF NOT EXISTS  `cat`;
+USE `cat`;
+CREATE TABLE IF NOT EXISTS  `cat` (
+  `idcat` int(11) NOT NULL AUTO_INCREMENT,
+  `color` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idcat`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
