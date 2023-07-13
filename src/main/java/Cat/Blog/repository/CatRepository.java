@@ -5,7 +5,7 @@ import Cat.Blog.model.Cat;
 import org.springframework.stereotype.Repository;
 
 
-
+//API for the Crud Operations
 @Repository
 public interface CatRepository extends JpaRepository<Cat,Integer> {
 
